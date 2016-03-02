@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="page-header">
+        <h2>Users</h2>
+    </div>
+    <div class="card-size">
+        <div class="card card-green">
+            <div class="card-title white-green">
+                <h4>Edit the details of a user</h4>
+            </div>
+            <div class="card-body">
+                <p>
+                  <table class="table table-condensed">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Active</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="u in users.users">
+                        <td>{{u._id}}</td>
+                        <td>{{u.email}}</td>
+                        <td>{{u.phone}}</td>
+                        <td>{{u.active}}</td>
+                        <td><a ui-sref="usersEdit({ id: u._id})">Edit</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </p>                       
+            </div>
+            <div class="card-border1">
+                <div class="card-border2">&nbsp;</div>
+            </div>                      
+        </div>
+    </div>    
+</div>
