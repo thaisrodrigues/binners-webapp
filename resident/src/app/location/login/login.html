@@ -1,0 +1,50 @@
+<div class="panel-login" ng-if="!login.isAuthenticated()">
+    <div class="panel-header">
+        <img src="assets/images/logo_white.png" class="logo center-block" />
+        <h3 class="text-center">BINNER'S PROJECT</h3>
+    </div>
+    <div class="panel-login-body">
+        <form method="post" ng-submit="login.login()" name="loginForm">
+            <div class="form-group input-group login-border">
+                <span class="input-group-addon">
+                          <i class="fa fa-envelope fa-2x"></i>
+                        </span>
+                <input class="form-control input-lg transparent-input" type="email" name="email" ng-model="login.user.email" placeholder="Email" style="background-color:rgba(0,0,0,0) !important;border:none !important;box-shadow:none !important;" required autofocus/>
+            </div>
+            <div class="form-group input-group login-border">
+                <span class="input-group-addon">
+                          <i class="fa fa-lock fa-2x"></i>
+                        </span>
+                <input class="form-control input-lg transparent-input" type="password" name="password" ng-model="login.user.password" placeholder="Password" style="background-color:rgba(0,0,0,0) !important;border:none !important;box-shadow:none !important;" required autofocus/>
+            </div>
+            <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-lg  btn-block btn-default">
+                Log in
+            </button>
+            <div class="row login-info">
+                <p class="text-center">
+                    <small>
+                    Don't have an account yet?
+                    <a href="#/signup">
+                        Sign up
+                    </a>
+                </small>
+                </p>
+                <div class="signup-or-separator">
+                    <span class="text">or</span>
+                </div>
+                <button class="btn  btn-facebook btn-social" ng-click="login.authenticate('facebook')">
+                    <i class="fa fa-facebook">
+                    </i> Facebook
+                </button>
+                <button class="btn btn-twitter btn-social" ng-click="login.authenticate('twitter')">
+                    <i class="fa fa-twitter">
+                    </i> Twitter
+                </button>
+                <button class="btn btn-google-plus btn-social" ng-click="login.authenticate('google')">
+                    <i class="fa fa-google-plus">
+                    </i> Google
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

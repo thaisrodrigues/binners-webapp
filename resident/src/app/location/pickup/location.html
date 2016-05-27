@@ -1,0 +1,32 @@
+<div class="form-group">
+    <fieldset>
+        <legend>What is the best date for the pick-up?</legend>
+        <div class="col-sm-6">
+            <label for="min">Date</label>
+            <input type="text" class="form-control" placeholder="Select the best date for you" name="date" ng-model="pickup.formData.date" pick-a-date="date" pick-a-date-options="pickup.dateConfig" />
+        </div>
+        <div class="col-sm-6">
+            <label for="max">Time</label>
+            <input type="text" class="form-control" placeholder="Select the best time for you" name="time" ng-model="pickup.formData.time" pick-a-time="time" pick-a-time-options="pickup.timeConfig" />
+        </div>
+    </fieldset>
+</div>
+<div class="form-group">
+    <label for="location">Pick-up Location</label>
+    <input type="text" class="form-control" name="location" placeholder="The pickup will be at your home, office or somewherelse." ng-model="pickup.formData.location">
+</div>
+<div class="form-group">
+    <label for="number">Number os Cans and Bottles</label>
+    <input type="text" class="form-control" name="number" ng-model="pickup.formData.number">
+</div>
+<div class="form-group">
+    <label for="instructions">Instructions</label>
+    <textarea class="form-control" name="instructions" ng-model="pickup.formData.instructions"></textarea>
+</div>
+<div class="form-group">
+    <div class="pull-right">
+        <a ui-sref="pickup.notes" class="btn btn-block btn-info">
+            Next step <span class="glyphicon glyphicon-circle-arrow-right">
+        </a>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.navbar{
+    margin-bottom: 0px;
+}
+.navbar-default {
+    .navbar-toggle {
+        background: $color-main;
+        .icon-bar {
+            background-color: white;
+        }
+        &:hover {
+            background: $color-main-hover;
+        }
+    }
+    .navbar-brand {
+        margin-top: -10px!important;
+        img {
+            height: 40px;
+        }
+    }
+    .navbar-nav {
+        li {
+            &:hover {
+                background: $color-main-hover;
+            }
+        }
+    }
+}

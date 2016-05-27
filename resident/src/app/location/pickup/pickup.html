@@ -1,0 +1,36 @@
+<bp-navbar></bp-navbar>
+<section>
+    <header class="pickup-header text-center">
+        <h3>
+                New Pickup 
+                <a ui-sref-active="active" ui-sref="pickup">
+                    <i class="glyphicon glyphicon-question-sign" style="color: #fff; font-size: 15px;"></i>
+                </a>
+            </h3>
+        <div class="status-buttons text-center">
+            <div class="col-xs-4">
+                <a ui-sref-active="active" ui-sref=".location"><span>1</span> Location</a>
+            </div>
+            <div class="col-xs-4">
+                <a ui-sref-active="active" ui-sref=".notes"><span>2</span> Notes</a>
+            </div>
+            <div class="col-xs-4">
+                <a ui-sref-active="active" ui-sref=".items"><span>3</span> Items</a>
+            </div>
+        </div>
+        <bp-loading wait="pickup.loading"></bp-loading>
+    </header>
+    <article>
+        <div class="form-container">
+            <form id="signup-form" ng-submit="pickup.processForm()">
+                <div id="form-views" ui-view>
+                    <p>To place a pick-up is simple as creating a new post on social media</p>
+                    <p>It's just follow this three steps and a binners will be contacted to take care of everything</p>
+                </div>
+            </form>
+        </div>
+<!--         <pre>
+        {{pickup.formData}}
+    </pre> -->
+    </article>
+</section>

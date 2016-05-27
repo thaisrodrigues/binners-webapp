@@ -1,0 +1,42 @@
+<header>
+    <nav class="navbar navbar-default navbar-static-top" ng-if="navbar.isAuthenticated()">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo.png">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active: navbar.isActive('/')}"><a href="#/">Home</a></li>
+                    <li ng-if="!navbar.isAuthenticated()"><a href="#/login">Login</a></li>
+                    <li ng-if="!navbar.isAuthenticated()"><a href="#/signup">Sign up</a></li>
+                    <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/dashboard')}"><a href="#/dashboard">Dashboard</a></li>
+                    <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/timeline')}"><a href="#/timeline">Timeline</a></li>
+                    <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/users')}"><a ui-sref="users">Users</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Profile</li>
+                            <li><a href="#/profile">My profile</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">bye-bye</li>
+                            <li><a href="#/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
