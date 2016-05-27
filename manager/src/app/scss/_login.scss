@@ -1,0 +1,28 @@
+.panel-login {
+    max-height: 300px;
+    padding: 40px;
+    background: lighten($color-main, 10%);
+    .panel-login-body {
+        @include border-radius(5px);
+        color: #fff;
+        background: $color-main;
+        padding: 20px;
+        max-width: 400px;
+        max-height: 350px;
+        margin: auto;
+        .login-info {
+            padding-top: 20px;
+            a {
+                color: #fff;
+            }
+            .btn-social {
+                @extend .col-md-4;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.login-border {
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}

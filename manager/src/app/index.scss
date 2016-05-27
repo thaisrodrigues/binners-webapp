@@ -1,0 +1,231 @@
+//This two guys need to be loaded first!!!
+@import "scss/_variables";
+@import "scss/_mixins";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+
+// bower:scss
+// endbower
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "../../bower_components/font-awesome/fonts";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Oxygen';
+    src: local('Oxygen'), local('Oxygen'), url('fonts/Oxygen_400_normal.ttf') format('truetype');
+}
+
+body, html {
+    height: 100%;
+    //margin-top: 60px;
+    background: $bg-color-main;
+}
+
+.content {
+    margin-top: 60px;
+}
+
+.logo {
+    width: 60px;
+}
+
+.img-circle {
+    padding: 0px!important;
+    background-color: red!important;
+}
+
+.navbar-brand {
+    //margin-left: 50px!important;
+    margin-top: -30px!important;
+}
+
+.text-blue {
+    color: $color-main;
+}
+
+div#navbar-collapse1,
+div.primary-nav {
+    color: $white;
+    background-color: $color-main;
+}
+
+.btn-success {
+    border: 0px;
+    background-color: $color-main;
+}
+
+.navbar-texto-claro {
+    color: $white;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    padding: 0.2em 0;
+    background: $bg-color-main;
+    color: $font-color;
+}
+
+.thumbnail {
+    img.pull-right {
+        width: 50px;
+    }
+}
+
+.btn-info {
+    @extend .btn;
+    @extend .btn-info;
+    width: 200px;
+    color: #fff;
+    font: 16px;
+    font-weight: 600;
+    background-color: #1A96E1;
+    border: 0px solid #AAAAAA;
+    @include border-radius(20px);
+}
+
+.popover {
+    //top: 71px !important;
+    right: 20px;
+    //margin-right: 20px !important;
+}
+
+.add-hitlist {
+    @extend .fa;
+    @extend .fa-heart;
+    color: red;
+}
+
+.btn-info i {
+    margin-top: 3px;
+    right: 20px;
+    //padding-right: 25px;
+}
+
+.card-title h4 {
+    color: $white;
+}
+
+div[class*='reflected']:before {
+    position: absolute;
+    font-size: 35px;
+    left: 5px;
+    top: 5px;
+}
+
+div[class*='reflected']:after {
+    position: absolute;
+    font-size: 35px;
+    right: 5px;
+    bottom: 5px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+.icon-search {
+    @extend .fa;
+    @extend .fa-search;
+    padding: 0px;
+    font-size: 20px;
+    line-height: 0.1;
+}
+
+.icon-bell {
+    @extend .fa;
+    @extend .fa-bell-o;
+    padding: 0px;
+    font-size: 20px;
+    line-height: 0.1;
+}
+
+.btn-pic-info {
+    @extend .btn;
+    @extend .btn-info;
+    @extend .btn-xs;
+    @include border-radius(10px);
+    width: 20px;
+    padding: 0px 3px;
+    border: 1px solid $white;
+    background-color: $color-main!important;
+}
+
+.fa {
+    color: $white;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position: center top;
+    }
+}
+
+// .spread:hover .suithearts {
+//   left: 30px;
+//   top: 0px;
+//   -webkit-transform: rotate(0deg);
+//   -moz-transform: rotate(0deg);
+//   -o-transform: rotate(0deg);
+//   -ms-transform: rotate(0deg);
+//   transform: rotate(0deg);
+// }
+// .spread > .card:hover {
+//   -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+//   box-shadow: 1px 1px 7px rgba(0,0,0,0.4);
+// }
+// /*GROW*/
+// .grow > .card {
+//   -webkit-transition: all 0.5s ease;
+//   -moz-transition: all 0.5s ease;
+//   -o-transition: all 0.5s ease;
+//   -ms-transition: all 0.5s ease;
+//   transition: all 0.5s ease;
+// }
+// .grow > .card:hover {
+//   -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.9);
+//   box-shadow: 1px 1px 7px rgba(0,0,0,0.9);
+//   -webkit-transform: scale(1.05,1.05);
+//   -moz-transform: scale(1.05,1.05);
+//   -o-transform: scale(1.05,1.05);
+//   -ms-transform: scale(1.05,1.05);
+//   transform: scale(1.05,1.05);
+// }
+@media (max-width: 480px) {
+    * {
+        font-size: 10px!important;
+    }
+    .card-size,
+    .container,
+    table {
+        padding: 0px !important;
+    }
+    tbody tr td {
+        font-size: 8px!important;
+    }
+}
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+
+// injector
+// endinjector

@@ -1,0 +1,48 @@
+.pickup-header {
+    background: $bg-header;
+    margin: 0;
+    color: $header-font-color;
+    h2 {
+        @include text-shadow;
+    }
+}
+
+.status-buttons {
+    //padding: 20px;
+    a {
+        //@include text-shadow;
+        display: inline-block;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        &:hover,
+        &:active,
+        &:visited {
+            text-decoration: none;
+        }
+    }
+    span {
+        color: $color-main;
+        background: white;
+        display: block;
+        height: 25px;
+        margin: 0px auto 10px;
+        padding-top: 5px;
+        width: 28px;
+        font-weight: 600;
+        @include border-radius(50%);
+        &:hover {
+            background: $header-font-color;
+        }
+    }
+    .active span {
+        background: $color-main;
+        color: #fff;
+    }
+}
+
+
+.btn-info{
+    @include border-radius;
+}

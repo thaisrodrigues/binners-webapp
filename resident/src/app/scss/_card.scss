@@ -1,0 +1,143 @@
+.card {
+    @include border-radius;
+    border-color: $color-main;
+    -webkit-box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.1);
+    border: 0px;
+}
+
+.card-size {    
+    @extend .col-lg-3; 
+    @extend .col-md-4; 
+    @extend .col-sm-6; 
+    @extend .col-xs-12;
+    padding: 0px 10px 10px 5px;
+}
+
+.card-size-4 {
+    @extend .col-sm-4;
+    @extend .col-xs-4;
+    @extend .col-md-4;
+    @extend .col-lg-4;
+}
+
+.card-title {    
+    @include border-radius(5px, bottom);
+    padding: 5px 0px 10px 20px;
+    margin-top: 0px;
+    min-height: 50px;
+    max-height: 50px;
+    text-align: middle;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.card-body {
+    height: 150px;
+    padding: 10px;
+    font-size: 12px;
+    p {
+        padding: 20px;
+        color: $color-main;
+    }
+    button {
+        @extend .btn;
+        @extend .btn-default;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: #AAAAAA;
+        font: 16px;
+        font-weight: 600;
+        border: 2px solid #AAAAAA;
+        @include border-radius(20px);
+    }
+}
+
+.grow {
+    &:hover {
+        //background-color: lighten($color-main, 60%);
+        -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+        // -webkit-transform: scale(1.05,1.05);
+        // -moz-transform: scale(1.05,1.05);
+        // -o-transform: scale(1.05,1.05);
+        // -ms-transform: scale(1.05,1.05);
+        // transform: scale(1.05,1.05);  
+        -webkit-transition: top 0.3s ease, left 1.3s ease;
+        -moz-transition: top 0.3s ease, left 1.3s ease;
+        -o-transition: top 0.3s ease, left 1.3s ease;
+        -ms-transition: top 0.3s ease, left 1.3s ease;
+        transition: top 0.3s ease, left 1.3s ease;
+    }
+}
+
+.color-main {
+    background: $color-main;
+}
+
+.lightgreen {
+    // @include bg-gradient-l2r($color-main, #2F953F); 
+    background: $color-main
+}
+
+.green {
+    background: #00E676;
+}
+
+.purple {
+    //@include bg-gradient-l2r(#AB47BC, #64B5F6); 
+    background: #AB47BC;
+}
+
+.blue {
+    background: #209ECB;
+}
+
+.red {
+    background: #FF2A3C;
+}
+
+
+/*SPREAD*/
+
+.spread {
+    // width: 350px;
+    // height: 250px;
+    position: relative;
+}
+
+.spread > .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: top 0.3s ease, left 0.3s ease;
+    -moz-transition: top 0.3s ease, left 0.3s ease;
+    -o-transition: top 0.3s ease, left 0.3s ease;
+    -ms-transition: top 0.3s ease, left 0.3s ease;
+    transition: top 0.3s ease, left 0.3s ease;
+}
+
+.card-border {
+    margin: auto;
+    background-color: $white;
+    padding: 0px;
+    @include border-radius(5px, top);
+    -webkit-box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+    margin-left: 3%;
+    width: 94%;
+    margin-top: 1px;
+    position: absolute;
+}
+
+.card-border1 {
+    @extend .card-border;
+    height: 5px;
+    position: absolute;
+}
+
+.card-border2 {
+    @extend .card-border;
+    height: 4px;
+    margin-top: 6px;
+}

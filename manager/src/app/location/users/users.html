@@ -1,0 +1,27 @@
+<bp-navbar></bp-navbar>
+<section>
+    <header>
+        <h2>Users</h2>
+        <bp-loading wait="users.loading"></bp-loading>
+    </header>
+    <article>
+        <table class="table table-hover table-responsive" datatable="ng">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="u in users.users">
+                    <td>{{u.email}}</td>
+                    <td>{{u.phone}}</td>
+                    <td>{{u.active}}</td>
+                    <td><a ui-sref="usersEdit({ id: u._id})" class="btn btn-default"><i class="fa fa-edit" style="color: #000"></i>Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
