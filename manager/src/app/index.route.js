@@ -6,12 +6,12 @@
 
         $stateProvider.state('login', {
                 url: '/login',
-                templateUrl: 'app/shared/login/login.html',
+                templateUrl: 'app/location/login/login.html',
                 controller: 'LoginController',
                 controllerAs: 'login'
             }).state('signup', {
                 url: '/signup',
-                templateUrl: 'app/shared/signup/signup.html',
+                templateUrl: 'app/location/signup/signup.html',
                 controller: 'SignupController',
                 controllerAs: 'signup'
             }).state('logout', {
@@ -24,7 +24,7 @@
                 }
             }).state('home', {
                 url: '/',
-                templateUrl: 'app/resident/home/home.html',
+                templateUrl: 'app/location/home/home.html',
                 controller: 'MainController',
                 controllerAs: 'main',
                 resolve: {

@@ -9,19 +9,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png">
+                    <span>Binner's Project</span>
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li ng-class="{ active: navbar.isActive('/')}"><a href="#/">Home</a></li>
                     <li ng-if="!navbar.isAuthenticated()"><a href="#/login">Login</a></li>
                     <li ng-if="!navbar.isAuthenticated()"><a href="#/signup">Sign up</a></li>
-                    <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/dashboard')}"><a href="#/dashboard">Dashboard</a></li>
-                    <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/timeline')}"><a href="#/timeline">Timeline</a></li>
+                    <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/dashboard')}"><a href="#/dashboard">Pick-Ups</a></li>
                     <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/users')}"><a ui-sref="users">Users</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
+                    <li ng-if="navbar.isAuthenticated()" ng-class="{ active: navbar.isActive('/reports')}"><a href="#/reports">Reports</a></li>
+
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="glyphicon glyphicon-user"></i>

@@ -1,7 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+.nav{
+    li{
+        a{
+            display: block;
+            padding: 22px 20px;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+            line-height: normal;
+        }
+    }
+}
 .navbar{
     margin-bottom: 0px;
 }
 .navbar-default {
+    background-color: #0F1215 !important;
+    border-top: 5px solid $color-main;
     .navbar-toggle {
         background: $color-main;
         .icon-bar {
@@ -11,10 +27,18 @@
             background: $color-main-hover;
         }
     }
+    .active a{
+        background-color: $color-main !important;
+    }
     .navbar-brand {
-        margin-top: -10px!important;
-        img {
-            height: 40px;
+        color: #ffffff;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 24px;
+        padding: 50px 0px 0px 40px;
+        &:hover {
+            color: $color-main-hover;
         }
     }
     .navbar-nav {
