@@ -45,7 +45,7 @@
                 }
             }).state('dashboard', {
                 url: '/manager/dashboard',
-                templateUrl: 'app/manager/dashboard/dashboard.html',
+                templateUrl: 'app/location/dashboard/dashboard.html',
                 controller: 'DashboardController',
                 controllerAs: 'vm',
                 resolve: {
@@ -53,7 +53,7 @@
                 }
             }).state('users', {
                 url: '/manager/users',
-                templateUrl: 'app/manager/users/users.html',
+                templateUrl: 'app/location/users/users.html',
                 controller: 'UsersController',
                 controllerAs: 'users',
                 resolve: {
@@ -61,7 +61,7 @@
                 }
             }).state('usersEdit', {
                 url: '/manager/users/:id',
-                templateUrl: 'app/manager/users/edit.html',
+                templateUrl: 'app/location/users/edit.html',
                 controller: 'UsersEditController',
                 controllerAs: 'edit',
                 resolve: {

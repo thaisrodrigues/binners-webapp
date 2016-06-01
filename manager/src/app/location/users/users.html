@@ -1,13 +1,14 @@
 <bp-navbar></bp-navbar>
 <section>
     <header>
-        <h2>Users</h2>
         <bp-loading wait="users.loading"></bp-loading>
     </header>
     <article>
+        <h2>Users</h2>
         <table class="table table-hover table-responsive" datatable="ng">
             <thead>
                 <tr>
+                    <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Active</th>
@@ -15,11 +16,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="u in users.users">
-                    <td>{{u.email}}</td>
-                    <td>{{u.phone}}</td>
-                    <td>{{u.active}}</td>
-                    <td><a ui-sref="usersEdit({ id: u._id})" class="btn btn-default"><i class="fa fa-edit" style="color: #000"></i>Edit</a></td>
+                <tr ng-repeat="u in users.users" ng-class="{even: even, odd: odd}">
+                        <td>{{u.name}}</td>
+                        <td>{{u.email}}</td>
+                        <td>{{u.phone}}</td>
+                        <td>
+                            <span ng-if="u.active">Yes</span>
+                            <span ng-if="!u.active">No</span>
+                        </td>
+                        <td>
+                            <a ui-sref="usersEdit({ id: u._id})" class="btn btn-default">
+                                <i class="fa fa-edit" style="color: #000"></i>
+                            </a>
+                        </td>
                 </tr>
             </tbody>
         </table>

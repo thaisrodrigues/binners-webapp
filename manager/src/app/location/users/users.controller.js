@@ -3,13 +3,14 @@
     angular.module('bProject').controller('UsersController', UsersController).controller('UsersEditController', UsersEditController);
     /** @ngInject */
     function UsersController(toastr, UsersService, $log) {
-        var vm = this;        
+        var vm = this;
         UsersService.GetAll().then(function(data) {
+            console.log(data);
             vm.users = data;
             vm.loading = false;
         }, function(error) {
             $log.debug('error:' + error);
-        });           
+        });
     }
 
     function UsersEditController(toastr, UsersService, $log, $stateParams) {
