@@ -1,62 +1,61 @@
 <bp-navbar></bp-navbar>
-<section>    
-    <div class="page-main">
-        <!-- <bp-aside username="main.username"></bp-aside> -->
-        <div class="card">
-            <div class="card-size">
-                <div class="card-title green">
-                    <h4>Dashboard</h4>
+<section class="container">
+
+    <div class="page-main row" >
+
+        <div class="col-lg-offset-1">
+
+            <div class="card">
+                <div class="card-size">
+                    <div class="card-title green">
+                        <h4>Pickup</h4>
+                    </div>
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="assets/images/cards/card_a.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Control all pickups</h2>
+                            <a class="info" href="#/pickup">Access it</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="hovereffect">
-                    <img class="img-responsive" src="assets/images/cards/card_a.jpg" alt="">
-                    <div class="overlay">
-                        <h2>Control the flow</h2>
-                        <a class="info" href="#/dashboard">Access it</a>
+            </div>
+            <div class="card">
+                <div class="card-size">
+                    <div class="card-title green">
+                        <h4>Users</h4>
+                    </div>
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="assets/images/cards/card_c.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Manage the users</h2>
+                            <a class="info" href="#/manager/users">Access it</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-size">
+                    <div class="card-title green">
+                        <h4>Reports</h4>
+                    </div>
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="assets/images/cards/card_b.jpg" alt="">
+                        <div class="overlay">
+                            <h2>Generate reports</h2>
+                            <a class="info" href="#/user">Access it</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-size">
-                <div class="card-title purple">
-                    <h4>Users</h4>
-                </div>
-                <div class="hovereffect">
-                    <img class="img-responsive" src="assets/images/cards/card_b.jpg" alt="">
-                    <div class="overlay">
-                        <h2>Manage the users</h2>
-                        <a class="info" href="#/user">Access it</a>
-                    </div>
-                </div>
-            </div>
+        <div class="home-report col-lg-6 col-lg-offset-3" >
+            <h2>
+                Total Pick-up's per month
+            </h2>
+            <canvas id="bar" class="chart chart-bar"
+                chart-data="data" chart-labels="labels" chart-colours="colors"> chart-series="series"
+            </canvas>
         </div>
-        <div class="card">
-            <div class="card-size">
-                <div class="card-title blue">
-                    <h4>Timeline</h4>
-                </div>
-                <div class="hovereffect">
-                    <img class="img-responsive" src="assets/images/cards/card_c.jpg" alt="">
-                    <div class="overlay">
-                        <h2>See the timeline</h2>
-                        <a class="info" href="#/timeline">Access it</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-size">
-                <div class="card-title red">
-                    <h4>Pickup</h4>
-                </div>
-                <div class="hovereffect">
-                    <img class="img-responsive" src="assets/images/cards/card_c.jpg" alt="">
-                    <div class="overlay">
-                        <h2>Control all pickups</h2>
-                        <a class="info" href="#/pickup">Access it</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </section>

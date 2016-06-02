@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('bProject', ['datatables', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'satellizer']);
+    .module('bProject', ['datatables', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'satellizer','chart.js']);
     // .controller('WithPromiseCtrl', WithPromiseCtrl);
 
     // function WithPromiseCtrl(DTOptionsBuilder, DTColumnBuilder, $resource) {
@@ -16,8 +16,6 @@
     //         DTColumnBuilder.newColumn('firstName').withTitle('First name'),
     //         DTColumnBuilder.newColumn('lastName').withTitle('Last name').notVisible()
     //     ];
-    // }    
+    // }
 
 })();
-
-

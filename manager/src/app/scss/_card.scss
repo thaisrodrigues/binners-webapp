@@ -6,12 +6,13 @@
     border: 0px;
 }
 
-.card-size {    
-    @extend .col-lg-3; 
-    @extend .col-md-4; 
-    @extend .col-sm-6; 
+.card-size {
+    @extend .col-lg-3;
+    @extend .col-md-4;
+    @extend .col-sm-6;
     @extend .col-xs-12;
     padding: 0px 10px 10px 5px;
+    width: 30%;
 }
 
 .card-size-4 {
@@ -21,7 +22,7 @@
     @extend .col-lg-4;
 }
 
-.card-title {    
+.card-title {
     @include border-radius(5px, bottom);
     padding: 5px 0px 10px 20px;
     margin-top: 0px;
@@ -62,7 +63,7 @@
         // -moz-transform: scale(1.05,1.05);
         // -o-transform: scale(1.05,1.05);
         // -ms-transform: scale(1.05,1.05);
-        // transform: scale(1.05,1.05);  
+        // transform: scale(1.05,1.05);
         -webkit-transition: top 0.3s ease, left 1.3s ease;
         -moz-transition: top 0.3s ease, left 1.3s ease;
         -o-transition: top 0.3s ease, left 1.3s ease;
@@ -76,16 +77,16 @@
 }
 
 .lightgreen {
-    // @include bg-gradient-l2r($color-main, #2F953F); 
+    // @include bg-gradient-l2r($color-main, #2F953F);
     background: $color-main
 }
 
 .green {
-    background: #00E676;
+    background: $color-main;
 }
 
 .purple {
-    //@include bg-gradient-l2r(#AB47BC, #64B5F6); 
+    //@include bg-gradient-l2r(#AB47BC, #64B5F6);
     background: #AB47BC;
 }
 
