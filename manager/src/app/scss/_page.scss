@@ -31,19 +31,40 @@ section {
             padding-bottom: 20px;
 
         }
+        .panel{
+            border-color: $color-main;
+            margin-right: 40px;
+            .panel-heading{
+                background-color: $color-main;
+            }
+            label{
+                color:#999;
+            }
+            .btn-u{
+                border: 0;
+                color: #fff;
+                font-size: 14px;
+                cursor: pointer;
+                font-weight: 400;
+                padding: 6px 13px;
+                position: relative;
+                background: $color-main;
+                white-space: nowrap;
+                display: inline-block;
+                text-decoration: none;
+            }
+        }
     }
 }
+
 table{
     padding-top: 40px;
     thead{
-        background-color: #27AE60;
+        background-color: $color-main;
 
         th{
             color: white;
             font-weight: 400 !important;
-        }
-        td{
-            color: pink;
         }
     }
 }
@@ -148,7 +169,10 @@ table{
 .even{
     background-color: #e9e9e9 !important;
 }
-
+.input-group-addon{
+    color: black;
+    background-color: #DFF0D8 !important;
+}
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
