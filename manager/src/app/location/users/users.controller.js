@@ -5,7 +5,6 @@
     function UsersController(toastr, UsersService, $log) {
         var vm = this;
         UsersService.GetAll().then(function(data) {
-            console.log(data);
             vm.users = data;
             vm.loading = false;
         }, function(error) {

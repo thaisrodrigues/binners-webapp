@@ -18,8 +18,7 @@
 
         return service;
 
-        function GetAll() {
-            console.log($auth);          
+        function GetAll() {        
             return $http.get(url()).then(handleSuccess, handleError('Error getting all users'));
         }
 
