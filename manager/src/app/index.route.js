@@ -30,11 +30,22 @@
                 resolve: {
                     loginRequired: loginRequired
                 }
-            }).state('pickup', {
-                url: '/pickup',
-                templateUrl: 'app/resident/pickup/pickup.html',
-                controller: 'PickupController',
-                controllerAs: 'pickup'
+            }).state('pickups', {
+                url: '/manager/pickups',
+                templateUrl: 'app/location/pickups/pickups.html',
+                controller: 'PickupsController',
+                controllerAs: 'pickups',
+                resolve: {
+                    loginRequired: loginRequired
+                }
+            }).state('pickupsEdit', {
+                url: '/manager/pickups/:id',
+                templateUrl: 'app/location/pickups/pickups-edit.html',
+                controller: 'PickupsEditController',
+                controllerAs: 'pickupsedit',
+                resolve: {
+                    loginRequired: loginRequired
+                }
             }).state('timeline', {
                 url: '/timeline',
                 templateUrl: 'app/timeline/timeline.html',

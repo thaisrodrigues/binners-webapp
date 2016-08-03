@@ -1,0 +1,84 @@
+<bp-navbar></bp-navbar>
+<section>
+    <header>
+
+    </header>
+    <article>
+        <div class="container">
+            <h2>Pickup Editor</h2>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-tasks"></i>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="inputStreet" class="col-lg-2 control-label">Street</label>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" id="inputStreet" placeholder="Street" ng-model="edit.pickup.address.street">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputCity" class="col-lg-2 control-label">City</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputCity" placeholder="City" ng-model="edit.pickup.address.city">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputState" class="col-lg-2 control-label">State</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputState" placeholder="State" ng-model="edit.pickup.address.state">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputZipCode" class="col-lg-2 control-label">Zip Code</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputZipCode" placeholder="Zip Code" ng-model="edit.pickup.address.zip">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTime" class="col-lg-2 control-label">Time</label>
+                            <div class="col-lg-10">
+                                <input type="date" class="form-control" id="inputTime" placeholder="Time" ng-model="edit.pickup.time">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputType" class="col-lg-2 control-label">Type</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputType" placeholder="Type" ng-model="edit.pickup.items.type">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPackageSize" class="col-lg-2 control-label">Package Size</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputPackageSize" placeholder="Package Size" ng-model="edit.pickup.items.packageSize">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputQuantity" class="col-lg-2 control-label">Quantity</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputQuantity" placeholder="Quantity" ng-model="edit.pickup.items.quantity">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputInstructions" class="col-lg-2 control-label">Instructions</label>
+                            <div class="col-lg-10">
+                                <textarea>
+                                    {{edit.pickup.instructions}}
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button type="submit" class="btn-u btn-u-green">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</section>

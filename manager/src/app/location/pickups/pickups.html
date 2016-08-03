@@ -1,0 +1,34 @@
+<bp-navbar></bp-navbar>
+<section>
+    <header>
+        <bp-loading wait="pickups.loading"></bp-loading>
+    </header>
+    <article>
+        <h2>Pickups</h2>
+        <table class="table table-hover table-responsive" datatable="ng">
+            <thead>
+                <tr>
+                    <th>Requester</th>
+                    <th>Address</th>
+                    <th>Tipo</th>
+                    <th>Tamanho</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in pickups.pickup" ng-class="{even: even, odd: odd}">
+                        <td>{{p.name}}</td>
+                        <td>{{p.items.type}}</td>
+                        <td>{{p.items.packageSize}}</td>
+                        <td>{{p.time}}</td>
+                        <td>
+                            <a ui-sref="pickupsEdit({ id: p._id})" class="btn btn-default">
+                                <i class="fa fa-edit" style="color: #000"></i>
+                            </a>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
