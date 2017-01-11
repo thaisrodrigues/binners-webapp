@@ -2,6 +2,7 @@
     'use strict';
     angular.module('bProject').controller('UsersController', UsersController);
     /** @ngInject */
+    UsersController.$inject = ['toastr','UsersService','$log'];
     function UsersController(toastr, UsersService, $log) {
         var vm = this;
         UsersService.GetAll().then(function(data) {
